@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiggaViews</title>
+    <style>
+        body {
+            background-color: #ff00ff;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #00ff00;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header {
+            text-align: center;
+            background-color: #ffcc00;
+            padding: 20px;
+        }
+        .reviews {
+            position: relative;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .product-review {
+            border: 1px solid #000;
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 10px;
+            position: absolute;
+            width: 200px;
+        }
+        .stars {
+            color: gold;
+            margin: 5px 0;
+        }
+        .ad {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            display: none; /* Hidden by default */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+    </style>
+    <script>
+        const ads = [
+            { src: 'ads/ad1.png', link: '#' },
+            { src: 'ads/ad2.jpeg', link: '#' },
+            { src: 'ads/ad3.jpeg', link: '#' },
+            { src: 'ads/ad4.jpg', link: '#' },
+            { src: 'ads/ad5.jpeg', link: '#' },
+            { src: 'ads/ad6.jpg', link: '#' },
+            { src: 'ads/ad7.png', link: '#' }
+        ];
+
+        function randomizeAds() {
+            const adElements = document.querySelectorAll('.ad');
+            adElements.forEach(ad => {
+                const randomAd = ads[Math.floor(Math.random() * ads.length)];
+                ad.style.backgroundImage = `url(${randomAd.src})`;
+                ad.onclick = () => window.location.href = randomAd.link;
+                ad.style.left = `${Math.random() * (window.innerWidth - 220)}px`;
+                ad.style.top = `${Math.random() * (window.innerHeight - 150)}px`;
+                ad.style.display = 'block'; // Make ad visible
+            });
+        }
+
+        function randomizeReviews() {
+            const reviews = document.querySelectorAll('.product-review');
+            reviews.forEach(review => {
+                const randomX = Math.random() * (window.innerWidth - 220);
+                const randomY = Math.random() * (window.innerHeight - 150);
+                review.style.left = `${randomX}px`;
+                review.style.top = `${randomY}px`;
+            });
+        }
+
+        function checkRickroll() {
+            const chance = Math.random() * 100;
+            if (chance < 26.3850930) {
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+        }
+
+        window.onload = function() {
+            randomizeAds();
+            randomizeReviews();
+            checkRickroll();
+        };
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>NiggaViews - By the Nigex team</h1>
+</header>
+
+<div id="ads-container">
+    <div class="ad"></div>
+    <div class="ad"></div>
+    <div class="ad"></div>
+    <div class="ad"></div>
+    <div class="ad"></div>
+    <div class="ad"></div>
+    <div class="ad"></div>
+</div>
+
+<div class="reviews">
+    <h2>Product Reviews</h2>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Self-Tying Shoelaces: "I bought these shoelaces to impress my dog. Now, he just stares at me in disappointment."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐</div>
+        Invisible Ink Pen: "This pen is perfect for writing letters to my friends that they’ll never see."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Instant Sock Organizer: "My socks now live in perfect harmony. They’ve formed a union and are demanding more vacation time."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Left-Handed Coffee Mug: "I bought this for my right-handed friend, and now they’re plotting my demise."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Cat Translator App: "This app told me my cat was demanding pizza. Now my cat is an influencer."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐</div>
+        Magic Toothbrush: "I thought it would magically brush my teeth. Turns out, I still have to do it myself."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Glow-in-the-Dark Toilet Paper: "Why do I need this? My bathroom feels like a rave now."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐</div>
+        Pet Rock 2.0: "Upgraded to a new pet rock. It still doesn’t fetch, but it looks great on my shelf!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Fake Mustache Kit: "My friends were really confused when I showed up with 12 mustaches."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Self-Watering Plant: "My plant is thriving. But now it wants to go on vacation."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Portable Hole: "I bought this to escape awkward conversations. Still trying to figure out how to use it."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐</div>
+        Underwater Hair Dryer: "It dried my hair, but my bathtub is now a swimming pool."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Vegan Meatball: "Tastes like sadness, but at least I can say I tried!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Left-Handed Whisk: "Didn’t realize I was right-handed until I tried this."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Space-Saving Bed: "I can fit my whole life in it. Still not sure where I’m supposed to sleep."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐</div>
+        Magic 8-Ball: "It told me to buy more Magic 8-Balls. Now I have a collection!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Anti-Gravity Shoes: "I still fall down stairs. But at least I look cool doing it!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐</div>
+        Portable Time Machine: "Used it to go back 5 minutes. Still regretting my lunch choice."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Pet Rock 3.0: "This one has googly eyes! Now it’s a family member!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Cereal Dispenser: "I broke it within a week. Now it’s just a very expensive bowl."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Invisible Dog Leash: "My dog is now a free spirit. I have no control!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Spaghetti Tree Seeds: "Planted them, and now my garden is just a bunch of weeds."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Coffee-Scented Candles: "Smells great until you realize you can’t drink it."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Dinosaur Costume: "Wore it to work, and now I’m known as the ‘Dino of the Office’."
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Universal Remote for Life: "Still can’t find the remote for my TV. What’s the point?"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Fortune Cookie Fortune Generator: "It just says ‘try again’. Thanks for nothing!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Self-Cleaning House: "Still waiting for it to kick in. My place looks like a tornado hit it!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Electric Fork: "I thought it would cook for me. It just vibrates. Disappointing!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        Underwater Toaster: "Breakfast is now an extreme sport!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐</div>
+        Chocolate-Scented Deodorant: "People kept trying to eat me. Never again!"
+    </div>
+    <div class="product-review">
+        <div class="stars">⭐⭐⭐⭐</div>
+        Reality Check: "It’s just a mirror. Thanks for the existential crisis!"
+    </div>
+</div>
+
+<footer>
+    <p>All reviews are completely made up. If you take them seriously, you might need to reconsider your life choices.</p>
+    <p>Contact Us: Just shout really loud.</p>
+</footer>
+
+</body>
+</html>
+
+       
+
