@@ -193,6 +193,10 @@ button {
             <iframe width="800" height="500"
             src="https://www.youtube.com/embed/FCHv-as0T6w">
             </iframe> 
+
+    <a id="randomImageLink" href="" target="_blank">
+        <img id="randomImage" alt="ad" width="400" height="200">
+    </a>
         </aside>
         Join klims official discord
         <iframe src="https://canary.discord.com/widget?id=1267119726287650836&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
@@ -262,54 +266,15 @@ button {
                     </div>
         </section>
                 </a>
-          <p>     </p>
-            <p>     </p>
-            <p>     </p>
             <p>    . </p>
-            <p>     </p>
             <p>   .  </p>
-            <p>     </p>
-            <p>     </p>
-            <p>     </p>
+            <p>   .  </p>
             <p>    . </p>
-            <p>     </p>
             <p>   .  </p>
             <p>   .  </p>
-            <p>  .   </p>
-            <p>     </p>
-            <p>     </p>
-            <p>     </p>
+            <p>     .</p>
             <p>    . </p>
-            <p>     </p>
-            <p>   .  </p>
-            <p>   .  </p>
-            <p>  .   </p>
-            <p>     </p>
-            <p>     </p>
-            <p>     </p>
-            <p>    . </p>
-            <p>     </p>
-            <p>   .  </p>
-            <p>   .  </p>
-            <p>  .   </p>
-            <p>     </p>
-            <p>     </p>
-            <p>     </p>
-            <p>    . </p>
-            <p>     </p>
-            <p>   .  </p>
-            <p>   .  </p>
-            <p>  .   </p>
-            <p>     </p>
-            <p>     </p>
-            <p>     </p>
-            <p>    . </p>
-            <p>     </p>
-            <p>   .  </p>
-            <p>   .  </p>
-            <p>  .   </p>
-            <p>   .  </p>
-            <p>  .   </p>  
+ 
     </main>
     <footer>
         <p>&copy; 2024 Klim's Preppy Website. All rights reserved.</p>
@@ -325,5 +290,21 @@ button {
         element.classList.toggle('spin');
     });
 });
+
+                const images = [
+            { src: 'ads/ad1.png', link: 'https://nigger-sex.xyz' },
+            { src: 'ads/ad2.jpeg', link: 'https://nigger-sex.xyz' },
+            { src: 'ads/ad3.jpeg', link: 'https://nigger-sex.xyz' },
+            { src: 'ads/ad4.jpg', link: 'https://nigger-sex.xyz' },
+            { src: 'ads/ad5.jpeg', link: 'https://nigger-sex.xyz' },
+            { src: 'ads/ad6.jpg', link: 'https://nigger-sex.xyz' },
+            { src: 'ads/ad7.png', link: 'https://nigger-sex.xyz' }
+        ];
+        
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const selectedImage = images[randomIndex];
+
+        document.getElementById('randomImage').src = selectedImage.src;
+        document.getElementById('randomImageLink').href = selectedImage.link;
     </script>
 </html>
