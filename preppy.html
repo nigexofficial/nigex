@@ -6,8 +6,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klim's Preppy Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Preppy Klim">
+    <meta property="og:description" content="Enjoy klims preppy adventures in the comfort of ur home. Hosted by Nigex">
+    <meta property="og:image" content="otherjunk/icons/siggers/favicon.png">
+    <meta property="og:url" content="selltoday">
     <link rel="icon" href="otherjunk/images/klimama/klim3.png" type="image/png">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #87CEEB;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #87CEEB;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.selfies-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.spin {
+    animation: spin 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+@keyframes rotate4 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+@keyframes moveAndSpin {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(120px, -140px);
+    }
+    50% {
+        transform: translate(-20px, 10px);
+    }
+    75% {
+        transform: translate(400px, 341px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+    </style>
 </head>
 <body>
     <header>
@@ -94,6 +259,8 @@
                 <h4> Ads from our sponsors </h4>
                 <a href="http://www.nigger-sex.xyz" target="_blank">
                  <img src="ads/ad1.png" alt="NiggaTV" class="link-image" width="390" height="150">
+                    </div>
+        </section>
                 </a>
           <p>     </p>
             <p>     </p>
@@ -143,13 +310,20 @@
             <p>  .   </p>
             <p>   .  </p>
             <p>  .   </p>  
-            </div>
-        </section>
     </main>
     <footer>
         <p>&copy; 2024 Klim's Preppy Website. All rights reserved.</p>
         <p>Hosted by <a href="https://nigger-sex.xyz" style="color: #1abc9c;">Nigex</a></p>
     </footer>
-    <script src="script.js"></script>
 </body>
+
+    <script>
+        document.getElementById('shakeButton').addEventListener('click', function() {
+    const elements = document.querySelectorAll('main, .selfie, .left-image, aside, section');
+    elements.forEach(element => {
+        element.classList.toggle('shake');
+        element.classList.toggle('spin');
+    });
+});
+    </script>
 </html>
