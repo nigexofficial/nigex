@@ -13,15 +13,17 @@
             justify-content: center;
             height: 100vh;
             background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffcccb;
         }
         .ad {
             margin: 20px;
             cursor: pointer;
-            border: 2px solid #bbb;
+            border: 5px solid yellow;
             width: 300px;
+            animation: shake 0.5s infinite;
         }
-        .cookie-banner {
+        .cookie-banner, .newsletter-banner {
             position: fixed;
             bottom: 0;
             background-color: #fff;
@@ -29,6 +31,29 @@
             width: 100%;
             text-align: center;
             border-top: 2px solid #bbb;
+            font-size: 20px;
+        }
+        .random-alert {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #ff0;
+            border: 2px solid #000;
+            padding: 10px;
+            font-size: 18px;
+            animation: blink 1s infinite;
+        }
+        @keyframes shake {
+            0% { transform: translate(0); }
+            25% { transform: translate(-5px, 5px); }
+            50% { transform: translate(5px, -5px); }
+            75% { transform: translate(-5px, -5px); }
+            100% { transform: translate(0); }
+        }
+
+       @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
     </style>
 </head>
@@ -40,6 +65,13 @@
     <div class="cookie-banner">
         Click accept so i can sell your data. <button onclick="acceptCookies()">Accept</button>
     </div>
+
+    <div class="newsletter-banner" id="newsletterBanner" style="display: none;">
+        Sign up for our newsletter! <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="signUp()">Sign Up</button>
+    </div>
+
+    <div class="random-alert" id="randomAlert">hello nigger</div>
     <script>
         function redirect() {
             const urls = [
@@ -73,6 +105,27 @@
 
        function acceptCookies() {
             document.querySelector('.cookie-banner').style.display = 'none';
+        }
+
+       setInterval(() => {
+            alert("Nigger");
+        }, 5000);
+
+        
+        function acceptCookies() {
+            document.querySelector('.cookie-banner').style.display = 'none';
+            const randomMinutes = Math.floor(Math.random() * 31) + 1; // Random between 1 and 30
+            alert(`Ur data is ours now you stupid nigger, we are gonna sell it in ${randomMinutes} minutes on the dark web, or ur retarded friend`);
+        }
+
+        function signUp() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                alert("You have been signed up to PornHub, Xvideos, FBI.gov +3 more!");
+                document.getElementById('newsletterBanner').style.display = 'none';
+            } else {
+                alert("i said a email address u stupid nigger");
+            }
         }
     </script>
 </body>
