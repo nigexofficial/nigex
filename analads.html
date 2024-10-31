@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>free nigger app nigger free ad nigger ad free nigger nigger free not pay ad free no nigger nigger free ad notification nigger nigger ad </title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .ad {
+            margin: 20px;
+            cursor: pointer;
+            border: 2px solid #bbb;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Annoying App!</h1>
+    <img src="ads/ad1.png" class="ad" onclick="redirect()">
+    <img src="ads/ad5.jpeg" class="ad" onclick="redirect()">
+    <img src="ads/ad7.png" class="ad" onclick="redirect()">
+    
+    <script>
+        function redirect() {
+            const urls = [
+                "https://nigger-sex.xyz/",
+                "https://nigger-sex.xyz/siggers",
+                "https://nigger-sex.xyz/vklog"
+            ];
+            const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+            window.open(randomUrl, "_blank");
+        }
+
+        function showNotification() {
+            if (Notification.permission === "granted") {
+                new Notification("Hello nigga go here or ima touch ya cheeks");
+            }
+        }
+
+        function requestNotificationPermission() {
+            if (Notification.permission !== "granted") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        setInterval(showNotification, 5000);
+                    }
+                });
+            } else {
+                setInterval(showNotification, 5000);
+            }
+        }
+
+        requestNotificationPermission();
+    </script>
+</body>
+</html>
