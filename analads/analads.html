@@ -21,14 +21,25 @@
             border: 2px solid #bbb;
             width: 300px;
         }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            background-color: #fff;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            border-top: 2px solid #bbb;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Annoying App!</h1>
+    <h1>nigger nigger nigger nigger</h1>
     <img src="../ads/ad1.png" class="ad" onclick="redirect()">
     <img src="../ads/ad5.jpeg" class="ad" onclick="redirect()">
     <img src="../ads/ad7.png" class="ad" onclick="redirect()">
-    
+    <div class="cookie-banner">
+        Click accept so i can sell your data. <button onclick="acceptCookies()">Accept</button>
+    </div>
     <script>
         function redirect() {
             const urls = [
@@ -59,6 +70,10 @@
         }
 
         requestNotificationPermission();
+
+       function acceptCookies() {
+            document.querySelector('.cookie-banner').style.display = 'none';
+        }
     </script>
 </body>
 </html>
