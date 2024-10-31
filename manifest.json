@@ -1,0 +1,15 @@
+{
+    "short_name": "Nigga ads",
+    "name": "NIGGA NIGGA NIGGA",
+    "icons": [
+        {
+            "src": "/otherjunk/icons/siggers/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "analads.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}
