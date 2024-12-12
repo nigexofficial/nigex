@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Defender Urgent Care</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0078D4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .message {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+
+        .phone-number {
+            font-size: 1.5em;
+            color: #0078D4;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #0078D4;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Styling for ads */
+        .ad, .alert-popup {
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 2px solid #0078D4;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .ad img, .alert-popup img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Styling for alert popups */
+        .alert-popup {
+            background-color: #FF4C4C;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .alert-popup h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        // Display a series of fake popups mimicking "Your computer is infected"
+        function showInfectedPopups() {
+            for (let i = 0; i < 10; i++) { // Number of infected popups
+                setTimeout(function() {
+                    let alertPopup = document.createElement('div');
+                    alertPopup.classList.add('alert-popup');
+                    alertPopup.innerHTML = `
+                        <h3>Your computer is infected!</h3>
+                        <p>Critical virus detected. Immediate action required!</p>
+                        <p><strong>Call now: 88005553535</strong></p>
+                    `;
+                    document.body.appendChild(alertPopup);
+                    
+                    // Randomize position
+                    let topPosition = Math.floor(Math.random() * 80) + '%';
+                    let leftPosition = Math.floor(Math.random() * 80) + '%';
+                    alertPopup.style.top = topPosition;
+                    alertPopup.style.left = leftPosition;
+
+                    // Show alert popup
+                    setTimeout(function() {
+                        alertPopup.style.display = 'block';
+                    }, i * 3000); // Alerts appear at staggered intervals
+                }, i * 5000); // Delay between popup creation
+            }
+        }
+
+        // Show random ads
+        function showAds() {
+            for (let i = 1; i <= 8; i++) {
+                let ad = document.createElement('div');
+                ad.classList.add('ad');
+                ad.innerHTML = `<img src="ads/ad${i}.png" alt="Ad ${i}" />`;
+                document.body.appendChild(ad);
+                
+                // Randomize position
+                let topPosition = Math.floor(Math.random() * 80) + '%';
+                let leftPosition = Math.floor(Math.random() * 80) + '%';
+                ad.style.top = topPosition;
+                ad.style.left = leftPosition;
+                
+                // Show ad
+                setTimeout(function() {
+                    ad.style.display = 'block';
+                }, i * 5000); // Ads appear at staggered intervals
+            }
+        }
+
+        // Start both the functions on page load
+        window.onload = function() {
+            showInfectedPopups();
+            showAds();
+        };
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Urgent Microsoft Defender Support</h1>
+    </header>
+
+    <div class="content">
+        <h2>Important: Action Required</h2>
+        <p class="message">It appears that your <span class="highlight">Microsoft Defender</span> has encountered a critical error and is no longer functioning properly.</p>
+        <p class="message">This is an urgent matter, and your system's security may be compromised. We strongly advise you to contact Microsoft Support immediately for assistance.</p>
+        
+        <p class="phone-number">Call Us Now: <strong>88005553535</strong></p>
+
+        <p>&copy; 2024 Microsoft</p>
+    </footer>
+
+</body>
+</html>
