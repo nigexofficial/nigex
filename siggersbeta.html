@@ -331,18 +331,21 @@ function setRandomImage(imageElement, linkElement) {
     linkElement.href = link;
 }
 
+document.querySelectorAll('.changeImageButton').forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const parentDiv = button.closest('div');
+        const imageElement = parentDiv.querySelector('.randomImage');
+        const linkElement = parentDiv.querySelector('.randomImageLink');
+        setRandomImage(imageElement, linkElement);
+    });
+});
+
+// Initialize all images and links when the page loads
 document.querySelectorAll('.randomImage').forEach((imageElement, index) => {
     const linkElement = document.querySelectorAll('.randomImageLink')[index];
     setRandomImage(imageElement, linkElement);
 });
 
-document.querySelectorAll('.changeImageButton').forEach(button => {
-    button.addEventListener('click', () => {
-        const imageElement = button.closest('div').querySelector('.randomImage');
-        const linkElement = button.closest('div').querySelector('.randomImageLink');
-        setRandomImage(imageElement, linkElement);
-    });
-});
 
     </script>
 
