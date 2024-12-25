@@ -325,14 +325,25 @@ const images = [
     { src: 'ads/ad7.png', link: 'https://example.com' }
 ];
 
-function setRandomImage() {
+function setRandomImage(imageElement, linkElement) {
     const { src, link } = images[Math.floor(Math.random() * images.length)];
-    document.getElementById('randomImage').src = src;
-    document.getElementById('randomImageLink').href = link;
+    imageElement.src = src;
+    linkElement.href = link;
 }
 
-setRandomImage();
-document.getElementById('changeImageButton').addEventListener('click', setRandomImage);
+document.querySelectorAll('.randomImage').forEach((imageElement, index) => {
+    const linkElement = document.querySelectorAll('.randomImageLink')[index];
+    setRandomImage(imageElement, linkElement);
+});
+
+document.querySelectorAll('.changeImageButton').forEach(button => {
+    button.addEventListener('click', () => {
+        const imageElement = button.closest('div').querySelector('.randomImage');
+        const linkElement = button.closest('div').querySelector('.randomImageLink');
+        setRandomImage(imageElement, linkElement);
+    });
+});
+
     </script>
 
 </body>
