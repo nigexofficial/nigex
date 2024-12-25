@@ -1,0 +1,339 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siggers - Marketplace for Niggers</title>
+    <link rel="icon" href="otherjunk/icons/siggers/favicon.png">
+    <meta property="og:title" content="Siggers - Sell ur nigger today">
+    <meta property="og:description" content="Sell your niggers today - FIRST PURCHASE 50% OFF">
+    <meta property="og:image" content="otherjunk/icons/siggers/favicon.png">
+    <meta property="og:url" content="selltoday">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 3rem;
+        }
+
+        .product-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .product-container h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .promo {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .product-item {
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .product-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+        }
+
+        /* Modal (popup) style */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .modal-header {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-body {
+            margin-bottom: 20px;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form-group input {
+            padding: 8px;
+            width: 100%;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <a id="randomImageLink" href="" target="_blank">
+        <img id="randomImage" alt="ad" width="400" height="200">
+    </a>
+	
+    <h1>Welcome to Siggers</h1>
+    <p>Founded in 2011 by the NiGex Team</p>
+      <a id="randomImageLink" href="" target="_blank">
+        <img id="randomImage" alt="ad" width="400" height="200">
+    </a>
+    <p><a href="https://bit.ly/nigex" target="_blank">NiGex Website</a></p>
+
+    <a id="randomImageLink" href="" target="_blank">
+        <img id="randomImage" alt="ad" width="400" height="200">
+    </a>
+
+    <div id="productList" class="product-container">
+    </div>
+
+    <a id="randomImageLink" href="" target="_blank">
+        <img id="randomImage" alt="ad" width="400" height="200">
+    </a>
+
+    <div id="productDetail" class="product-container" style="display: none;">
+    </div>
+
+    <a id="randomImageLink" href="" target="_blank">
+        <img id="randomImage" alt="ad" width="400" height="200">
+    </a>
+	
+    <div class="footer">
+        <p>© NiGex 1999 - 2024 │ © Siggers 2011 - 2024</p>
+    </div>
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 class="modal-header">Checkout</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" name="street" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal" name="postal" required>
+                </div>
+                <button type="submit">Proceed to Checkout</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const promo = urlParams.get('promo');
+        const productHash = window.location.hash.replace('#product=', '');
+        const productListContainer = document.getElementById('productList');
+        const productDetailContainer = document.getElementById('productDetail');
+        const checkoutModal = document.getElementById('checkoutModal');
+        const checkoutForm = document.getElementById('checkoutForm');
+        let discount = 0;
+
+        const products = {
+            1: {
+                name: "Nikka Pososikka",
+                description: "Very fast at working, also cums very well, EOS 30 Dec 2024",
+                basePrice: 200
+            },
+            2: {
+                name: "Annal Nika",
+                description: "She is a nigger, woman and blonde, she cant even pick a single disability so thats why we offer her cheap, also shes very bad in bed, tested",
+                basePrice: 50
+            },
+        };
+
+        if (promo === 'restock' || promo === 'xmas') {
+            discount = 50;
+        }
+
+        function showProductList() {
+            let productListHtml = '<h2>Available Niggas</h2>';
+            for (let id in products) {
+                const product = products[id];
+                productListHtml += `
+                    <div class="product-item" onclick="showProductDetails(${id})">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                    </div>
+                `;
+            }
+            productListContainer.innerHTML = productListHtml;
+            productListContainer.innerHTML += `
+                <a href="https://bit.ly/lenyatg" target="_blank">
+                    <button>Sell Your Nigga to Us</button>
+                </a>
+            `;
+        }
+		
+        function showProductDetails(productId) {
+            const product = products[productId];
+            const finalPrice = product.basePrice * (1 - discount / 100);
+	    const urlParams = new URLSearchParams(window.location.search);
+            const promoMessage = discount > 0 ? `You're getting a ${discount}% discount for using a Code!` : '';
+
+            productDetailContainer.style.display = 'block';
+            productListContainer.style.display = 'none';
+
+            productDetailContainer.innerHTML = `
+                <h2>${product.name}</h2>
+                <p class="product-description">${product.description}</p>
+                <p class="price">$${finalPrice.toFixed(2)}${promoMessage ? `<br><span class="promo">${promoMessage}</span>` : ''}</p>
+                <button onclick="openModal(${finalPrice.toFixed(2)})">Buy Now</button>
+                <button onclick="goBack()">Back to Products</button>
+            `;
+        }
+
+        function openModal(price) {
+            checkoutModal.style.display = "block";
+        }
+
+        function closeModal() {
+            checkoutModal.style.display = "none";
+        }
+
+        checkoutForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const street = document.getElementById('street').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const postal = document.getElementById('postal').value;
+
+            alert(`Thank you for your purchase, ${name}! Your nigga will be shipped shortly!`);
+
+            setTimeout(() => {
+                window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+            }, 2000);
+        });
+
+        function goBack() {
+            productDetailContainer.style.display = 'none';
+            productListContainer.style.display = 'block';
+        }
+
+        if (productHash) {
+            showProductDetails(productHash);
+        } else {
+            showProductList();
+        }
+
+const images = [
+    { src: 'ads/ad1.png', link: 'https://example.com' },
+    { src: 'ads/ad2.jpeg', link: 'https://example.com' },
+    { src: 'ads/ad3.jpeg', link: 'https://example.com' },
+    { src: 'ads/ad4.jpg', link: 'https://example.com' },
+    { src: 'ads/ad5.jpeg', link: 'https://example.com' },
+    { src: 'ads/ad6.jpg', link: 'https://example.com' },
+    { src: 'ads/ad7.png', link: 'https://example.com' }
+];
+
+function setRandomImage() {
+    const { src, link } = images[Math.floor(Math.random() * images.length)];
+    document.getElementById('randomImage').src = src;
+    document.getElementById('randomImageLink').href = link;
+}
+
+setRandomImage();
+document.getElementById('changeImageButton').addEventListener('click', setRandomImage);
+    </script>
+
+</body>
+</html>
