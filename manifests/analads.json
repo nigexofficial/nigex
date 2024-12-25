@@ -1,9 +1,9 @@
 {
     "short_name": "Nigga ads nigger fart",
-    "name": "NIGGA NIGGA NIGGA",
+    "name": "niga ads",
     "icons": [
         {
-            "src": "/otherjunk/icons/siggers/favicon.png",
+            "src": "../otherjunk/icons/siggers/favicon.png",
             "sizes": "192x192",
             "type": "image/png"
         }
