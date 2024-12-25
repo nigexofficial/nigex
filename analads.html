@@ -65,7 +65,8 @@
     <div class="cookie-banner">
         Click accept so i can sell your data. <button onclick="acceptCookies()">Accept</button>
     </div>
-
+    <button id="notifyButton">Enable Notifications</button>
+    <p id="message" style="display:none;">FEMBOY FURRY FEET ONLY HERE; CLICK THE ACCEPT BUTTON TO SEE!!!</p>
     <div class="newsletter-banner" id="newsletterBanner" style="display: none;">
         Sign up for our newsletter! <input type="email" id="email" placeholder="Enter your email">
         <button onclick="signUp()">Sign Up</button>
@@ -126,6 +127,31 @@
             } else {
                 alert("i said a email address u stupid nigger");
             }
+        }
+
+        let notificationInterval;
+
+        if ('serviceWorker' in navigator && 'PushManager' in window) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js');
+
+                document.getElementById('notifyButton').addEventListener('click', () => {
+                    document.getElementById('message').style.display = 'block';
+                    Notification.requestPermission().then(permission => {
+                        if (permission === 'granted') {
+                            startSendingNotifications();
+                        }
+                    });
+                });
+            });
+        }
+
+        function startSendingNotifications() {
+            notificationInterval = setInterval(() => {
+                navigator.serviceWorker.ready.then(registration => {
+                    registration.showNotification('analsex');
+                });
+            }, 30000);
         }
     </script>
 </body>
