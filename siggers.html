@@ -235,6 +235,10 @@
             discount = 50;
         }
 
+	if (promo === 'lidny') {
+            discount = 100;
+        }
+
         function showProductList() {
             let productListHtml = '<h2>Available Ziggas</h2>';
             for (let id in products) {
